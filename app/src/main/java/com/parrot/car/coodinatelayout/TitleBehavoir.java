@@ -56,11 +56,11 @@ public class TitleBehavoir extends CoordinatorLayout.Behavior<ImageView> {
         }
 
 
-        float tY = Math.abs(dependency.getY()/y)*Math.abs(cy-imgY);
-        float tX = Math.abs(dependency.getY()/y)*Math.abs(cx-imgX);
+        float tY = Math.abs(dependency.getY()/y)*(Math.abs(cy-imgY)+10);
+        float tX = Math.abs(dependency.getY()/y)*(Math.abs(cx-imgX)+85);
 
 
-        Log.e("------TitleBehavoir-------=" + y,"==2=" + dependency.getY());
+        Log.e("------TitleBehavoir-------=" + dependency.getY(),"==2=" + dependency.getTop());
         child.setTranslationY(-tY);
         child.setTranslationX(tX);
         child.setScaleX(1-Math.abs(dependency.getY()/y));
